@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">totophoto</string>
+    <string name="title_home">Home</string>
+    <string name="title_my_account">Upload</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="search">Search</string>
+    <string name="upload_a_picture">Upload a picture</string>
+    <string name="image">Image</string>
+    <string name="added_fav">Picture added to favorites</string>
+    <string name="delete_fav">Picture removed from favorites</string>
+    <string name="pic_uploaded">Picture has been uploaded</string>
+    <string name="uploading_pic">Picture is uploading…</string>
+    <string name="pic_not_uploaded">An error occurred, the picture hasn\'t been uploaded</string>
+    <string name="copy_to_clipboard">Link copied to clipboard</string>
+    <string name="preview">Preview</string>
+    <string name="loading">Loading…</string>
+    <string name="insert_a_tittle">Insert a title for your picture</string>
+    <string name="title">Title</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_title">No title</string>
+    <string name="no_internet">No network connection detected</string>
+    <string name="internet_requiered">The app requires a valid network connexion to work properly</string>
+    <string name="ok_too">Ok too but different button</string>
+    <string-array name="spinner_sort">
+        <item>time</item>
+        <item>viral</item>
+        <item>top</item>
+    </string-array>
+    <string-array name="spinner_type">
+        <item>all</item>
+        <item>album</item>
+        <item>jpg</item>
+        <item>png</item>
+        <item>gif</item>
+        <item>anigif</item>
+    </string-array>
+</resources>
