@@ -29,6 +29,14 @@
                         android:contentDescription="@string/image"
                         app:srcCompat="@android:color/background_light" />
 
+                    <SurfaceView
+                        android:id="@+id/previewVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:visibility="invisible"
+                        app:srcCompat="@android:color/background_light" />
+
                     <ProgressBar
                         android:id="@+id/progressBar"
                         style="?android:attr/progressBarStyle"
