@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">totophoto</string>
+    <string name="app_name">Totophoto</string>
 
     <!--        Bottom NavBar       -->
     <string name="title_home">Home</string>
     <string name="title_my_account">Upload</string>
     <string name="title_favorites">Favorites</string>
-    <string name="title_setting">Setting</string>
+    <string name="title_setting">Settings</string>
 
     <string name="search">Search</string>
     <string name="upload_a_picture">Upload a picture</string>

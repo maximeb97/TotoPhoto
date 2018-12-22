@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Totophoto</string>
+
+    <!--        Bottom NavBar       -->
+    <string name="title_home">Home</string>
+    <string name="title_my_account">Upload</string>
+    <string name="title_favorites">Favoris</string>
+    <string name="title_setting">Options</string>
+
+    <string name="search">Recherche</string>
+    <string name="upload_a_picture">Upload une image</string>
+    <string name="image">Image</string>
+    <string name="added_fav">Image ajouté aux favoris</string>
+    <string name="delete_fav">Image retiré des favoris</string>
+    <string name="pic_uploaded">Image en cour de chargement</string>
+    <string name="uploading_pic">Image en cour d\'upload…</string>
+    <string name="pic_not_uploaded">Une erreur est survenu, l\image n\'a pas été upload</string>
+    <string name="copy_to_clipboard">Lien copié</string>
+    <string name="preview">Aperçu</string>
+    <string name="loading">Chargement…</string>
+    <string name="insert_a_tittle">Insérer un titre pour l\'image</string>
+    <string name="title">Titre</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Annuler</string>
+    <string name="no_title">Aucun titre</string>
+    <string name="no_internet">Aucune connexion internet</string>
+    <string name="internet_requiered">L\'app à besoin d\'une connexion internet valide pour fonctionner</string>
+    <string name="ok_too">Ok too but different button</string>
+    <string-array name="spinner_sort">
+        <item>temps</item>
+        <item>viral</item>
+        <item>top</item>
+    </string-array>
+    <string-array name="spinner_type">
+        <item>tous</item>
+        <item>album</item>
+        <item>jpg</item>
+        <item>png</item>
+        <item>gif</item>
+        <item>anigif</item>
+    </string-array>
+</resources>
