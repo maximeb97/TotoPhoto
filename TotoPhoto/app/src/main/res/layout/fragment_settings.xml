@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/FRselect"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toEndOf="@+id/CNselect"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_fr_round_flag" />
+
+    <ImageView
+        android:id="@+id/CNselect"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toEndOf="@+id/LanguageSelect"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_zh_round_flag" />
+
+    <ImageView
+        android:id="@+id/ENselect"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toEndOf="@+id/FRselect"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_en_round_flag" />
+
+    <TextView
+        android:id="@+id/LanguageSelect"
+        android:layout_width="88dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:textColor="@color/colorText"
+        android:text="@string/select_country"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/NightSelect"
+        android:layout_width="301dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/select_mode"
+        android:textColor="@color/colorText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LanguageSelect" />
 </android.support.constraint.ConstraintLayout>

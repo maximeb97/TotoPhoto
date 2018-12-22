@@ -7,6 +7,10 @@
     <string name="title_favorites">Favoris</string>
     <string name="title_setting">Options</string>
 
+    <!--        Settings        -->
+    <string name="select_country">Selectionner votre langue: </string>
+    <string name="select_mode">Mode nuit: </string>
+
     <string name="search">Recherche</string>
     <string name="upload_a_picture">Upload une image</string>
     <string name="image">Image</string>
