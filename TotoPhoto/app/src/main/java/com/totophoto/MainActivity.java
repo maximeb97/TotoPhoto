@@ -17,6 +17,7 @@ import com.totophoto.fragment.SectionPageAdapter;
 import com.totophoto.fragment.accountFragment;
 import com.totophoto.fragment.favoritesFragment;
 import com.totophoto.fragment.homeFragment;
+import com.totophoto.fragment.settingsFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -41,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_notifications:
                     mViewPager.setCurrentItem(2);
+                    return true;
+                case R.id.navigation_setting:
+                    mViewPager.setCurrentItem(3);
                     return true;
             }
             return false;
@@ -111,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new homeFragment());
         adapter.addFragment(new accountFragment());
         adapter.addFragment(new favoritesFragment());
+        adapter.addFragment(new settingsFragment());
         mViewPager.setAdapter(adapter);
     }
 
