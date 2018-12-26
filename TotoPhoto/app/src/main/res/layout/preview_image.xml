@@ -21,20 +21,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <SurfaceView
+                        android:id="@+id/previewVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:color/background_light" />
+
                     <ImageView
                         android:id="@+id/previewImage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/image"
-                        app:srcCompat="@android:color/background_light" />
-
-                    <SurfaceView
-                        android:id="@+id/previewVideo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:visibility="invisible"
                         app:srcCompat="@android:color/background_light" />
 
                     <ProgressBar

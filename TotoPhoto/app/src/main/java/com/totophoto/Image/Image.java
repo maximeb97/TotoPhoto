@@ -16,8 +16,10 @@ public class Image {
         name = name.replace("\"", "'");
 
         link = link.replace("\"", "'");
-        if (link.contains(".mp4"))
+        if (link.contains(".mp4")) {
             name = "(MP4) " + name;
+            link = link.replace(".mp4", ".gif");
+        }
     }
     /**
      *
