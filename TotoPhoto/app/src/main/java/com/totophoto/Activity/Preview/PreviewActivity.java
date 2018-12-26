@@ -47,9 +47,9 @@ public class PreviewActivity extends AppCompatActivity implements SurfaceHolder.
     ProgressBar progressBar = null;
     ToggleButton btnFavorite = null;
     Favorite fav = null;
+    SurfaceView surfaceView = null;
 
     private String videoSource = null;
-    private SurfaceView surfaceView = null;
     private SurfaceHolder surfaceHolder = null;
     private MediaController mediaController;
     private MediaPlayer mediaPlayer;
@@ -63,8 +63,11 @@ public class PreviewActivity extends AppCompatActivity implements SurfaceHolder.
         String title = null;
         if (b != null) {
             url = b.getString("link");
-            videoSource = url;
             title = b.getString("title");
+            if (title.contains("(MP4)")) {
+                url = url.replace(".gif", ".mp4");
+            }
+            videoSource = url;
             if (b.containsKey("is_new")) {
                 setNewName();
             }
@@ -87,6 +90,7 @@ public class PreviewActivity extends AppCompatActivity implements SurfaceHolder.
         textTitle = (TextView)findViewById(R.id.textPictureTitle);
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
         btnFavorite = (ToggleButton)findViewById(R.id.setFavoriteButton);
+        surfaceView = (SurfaceView)findViewById(R.id.previewVideo);
 
         btnShare = (ImageButton)findViewById(R.id.btn_share);
 
@@ -118,9 +122,10 @@ public class PreviewActivity extends AppCompatActivity implements SurfaceHolder.
             }
         });
 
-        if (textUrl.getText().toString().contains(".mp4")) {
+        if (url.contains(".mp4")) {
             progressBar.setVisibility(View.GONE);
             picture.setVisibility(View.INVISIBLE);
+            surfaceView.setVisibility(View.VISIBLE);
             loadVideo();
         } else {
             Glide.with(getApplicationContext()).load(url).listener(new RequestListener<String, GlideDrawable>() {
@@ -182,9 +187,8 @@ public class PreviewActivity extends AppCompatActivity implements SurfaceHolder.
 
     private void loadVideo()
     {
-        surfaceView = (SurfaceView)findViewById(R.id.previewVideo);
         surfaceHolder = surfaceView.getHolder();
-        surfaceHolder.addCallback(this);
+        surfaceHolder.addCallback(PreviewActivity.this);
         surfaceView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -196,13 +200,15 @@ public class PreviewActivity extends AppCompatActivity implements SurfaceHolder.
         });
     }
 
+    @Override
     public void surfaceCreated(SurfaceHolder holder) {
-
+        Toast.makeText(getApplicationContext(), "Surface Created", Toast.LENGTH_SHORT).show();
         MediaPlayer mediaPlayer = new MediaPlayer();
         mediaPlayer.setDisplay(surfaceHolder);
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         mediaPlayer.setOnPreparedListener(this);
         try {
+            Toast.makeText(getApplicationContext(), "MP4: " + videoSource, Toast.LENGTH_SHORT).show();
             mediaPlayer.setDataSource(videoSource);
             mediaPlayer.prepare();
             mediaController = new MediaController(this);
