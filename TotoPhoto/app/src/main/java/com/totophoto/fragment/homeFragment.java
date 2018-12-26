@@ -23,10 +23,6 @@ import com.totophoto.Image.ImageListAdapter;
 import com.totophoto.R;
 import com.totophoto.api.imgur.imgur;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 
