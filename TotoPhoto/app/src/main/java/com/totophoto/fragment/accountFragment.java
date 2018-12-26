@@ -19,7 +19,6 @@ import com.totophoto.R;
 import com.totophoto.api.imgur.imgur;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;

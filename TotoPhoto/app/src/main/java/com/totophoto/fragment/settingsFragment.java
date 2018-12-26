@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatDelegate;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +17,6 @@ import android.widget.TextView;
 import com.totophoto.DataBase.ManageDB;
 import com.totophoto.Models.Settings;
 import com.totophoto.R;
-
-import java.util.Locale;
 
 
 public class settingsFragment extends Fragment {

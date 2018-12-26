@@ -5,10 +5,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by Thomas on 05/02/2018.
- */
-
-/**
  * This class is used for create the Data-Base
  */
 public class myDB extends SQLiteOpenHelper{
