@@ -35,4 +35,15 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_upload"
         app:layout_constraintStart_toStartOf="@+id/btn_upload"
         app:layout_constraintTop_toBottomOf="@+id/btn_upload" />
+
+    <Button
+        android:id="@+id/Dik"
+        android:layout_width="187dp"
+        android:layout_height="66dp"
+        android:text="TakeDikpik"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="3dp" />
+
+
 </android.support.constraint.ConstraintLayout>

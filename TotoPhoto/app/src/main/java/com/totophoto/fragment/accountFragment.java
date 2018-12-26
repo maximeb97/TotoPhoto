@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -33,7 +34,7 @@ public class accountFragment extends Fragment {
     private static int RESULT_LOAD_IMAGE = 1;
 
     private ImageView btnUpload = null;
-
+    protected Button bitch;
     private imgur api;
 
     @Nullable
@@ -48,6 +49,18 @@ public class accountFragment extends Fragment {
                 selectPicture();
             }
         });
+
+        bitch = view.findViewById(R.id.Dik);
+
+        bitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Dicpik = new Intent(view.getContext(), Dicpik.class);
+                startActivityForResult(Dicpik, 0);
+            }
+        });
+
+
         return view;
     }
 

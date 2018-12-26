@@ -1,5 +1,6 @@
 package com.totophoto;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private SectionPageAdapter mSesctionPageAdapter;
 
     private ViewPager mViewPager;
-
+    public static Activity activity;
     private int currentLayout;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         ManageDB db = new ManageDB(this);
         Settings settings = db.getSettings();
         int settingView = 0;
-
+        activity = this;
         if (settings.getLang() != null || settings.getMode() != null) {
             if (settings.getLang() != null) {
                 String languageToLoad  = settings.getLang();
