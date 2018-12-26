@@ -3,6 +3,7 @@ package com.totophoto;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -13,6 +14,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.MenuItem;
 
 import com.totophoto.DataBase.ManageDB;
@@ -72,20 +74,35 @@ public class MainActivity extends AppCompatActivity {
         ManageDB db = new ManageDB(this);
         Settings settings = db.getSettings();
         int settingView = 0;
-        if (settings.getLang() != null) {
-            String languageToLoad  = settings.getLang();
-            String[] parts = languageToLoad.split("-");
-            db.setLang(parts[0]);
-            if (parts.length > 1) {
-                settingView = 3;
-            }
-            Locale locale = new Locale(parts[0]);
-            Locale.setDefault(locale);
-            Configuration config = new Configuration();
-            config.locale = locale;
-            getBaseContext().getResources().updateConfiguration(config,
-                    getBaseContext().getResources().getDisplayMetrics());
 
+        if (settings.getLang() != null || settings.getMode() != null) {
+            if (settings.getLang() != null) {
+                String languageToLoad  = settings.getLang();
+                String[] parts = languageToLoad.split("-");
+                db.setLang(parts[0]);
+                if (parts.length > 1) {
+                    settingView = 3;
+                }
+                Locale locale = new Locale(parts[0]);
+                Locale.setDefault(locale);
+                Configuration config = new Configuration();
+                config.locale = locale;
+                getBaseContext().getResources().updateConfiguration(config,
+                        getBaseContext().getResources().getDisplayMetrics());
+            }
+            if (settings.getMode() != null) {
+                String mode = settings.getMode();
+                String[] mods = mode.split("-");
+                db.setMode(mods[0]);
+                if (mods.length > 1) {
+                    settingView = 3;
+                }
+                if (mods[0].equals("day")) {
+                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                } else {
+                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                }
+            }
         }
         setContentView(R.layout.activity_main);
 
