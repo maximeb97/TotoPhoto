@@ -34,7 +34,7 @@ public class accountFragment extends Fragment {
     private static int RESULT_LOAD_IMAGE = 1;
 
     private ImageView btnUpload = null;
-    protected Button bitch;
+    private ImageView btnTakePicture = null;
     private imgur api;
 
     @Nullable
@@ -50,13 +50,13 @@ public class accountFragment extends Fragment {
             }
         });
 
-        bitch = view.findViewById(R.id.Dik);
+        btnTakePicture = (ImageView)view.findViewById(R.id.takePicture);
 
-        bitch.setOnClickListener(new View.OnClickListener() {
+        btnTakePicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Dicpik = new Intent(view.getContext(), Dicpik.class);
-                startActivityForResult(Dicpik, 0);
+                Intent activityPicture = new Intent(view.getContext(), takePictureActivity.class);
+                startActivityForResult(activityPicture, 0);
             }
         });
 

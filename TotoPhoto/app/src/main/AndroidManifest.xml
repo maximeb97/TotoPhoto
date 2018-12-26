@@ -30,7 +30,7 @@
             android:name=".Activity.Preview.PreviewActivity"
             android:label="@string/preview">
         </activity>
-        <activity android:name=".fragment.Dicpik" />
+        <activity android:name=".fragment.takePictureActivity" />
     </application>
 
 </manifest>

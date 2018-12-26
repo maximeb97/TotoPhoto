@@ -36,14 +36,17 @@
         app:layout_constraintStart_toStartOf="@+id/btn_upload"
         app:layout_constraintTop_toBottomOf="@+id/btn_upload" />
 
-    <Button
-        android:id="@+id/Dik"
-        android:layout_width="187dp"
-        android:layout_height="66dp"
-        android:text="TakeDikpik"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="3dp" />
+    <ImageView
+        android:id="@+id/takePicture"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
 
 
 </android.support.constraint.ConstraintLayout>
