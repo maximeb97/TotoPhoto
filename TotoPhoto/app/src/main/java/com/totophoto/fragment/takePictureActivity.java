@@ -75,6 +75,12 @@ public class takePictureActivity extends AppCompatActivity {
         ORIENTATIONS.append(Surface.ROTATION_270, 180);
     }
 
+    private final void closeCamera() {
+        Intent intent = new Intent();
+        setResult(RESULT_OK, intent);
+        finish();
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,9 +89,7 @@ public class takePictureActivity extends AppCompatActivity {
         back = (ImageView)findViewById(R.id.photoBack);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent();
-                setResult(RESULT_OK, intent);
-                finish();
+                closeCamera();
             }
         });
 
@@ -259,6 +263,7 @@ public class takePictureActivity extends AppCompatActivity {
                         uploadPicture(bytes);
                         save(bytes);
                         galleryAddPic();
+                        closeCamera();
                     } catch (IOException e) {
                         e.printStackTrace();
                     } finally {
