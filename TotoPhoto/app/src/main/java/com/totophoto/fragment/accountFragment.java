@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -19,7 +20,6 @@ import com.totophoto.R;
 import com.totophoto.api.imgur.imgur;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -35,7 +35,7 @@ public class accountFragment extends Fragment {
     private static int RESULT_LOAD_IMAGE = 1;
 
     private ImageView btnUpload = null;
-
+    private ImageView btnTakePicture = null;
     private imgur api;
 
     @Nullable
@@ -50,6 +50,18 @@ public class accountFragment extends Fragment {
                 selectPicture();
             }
         });
+
+        btnTakePicture = (ImageView)view.findViewById(R.id.takePicture);
+
+        btnTakePicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent activityPicture = new Intent(view.getContext(), takePictureActivity.class);
+                startActivityForResult(activityPicture, 0);
+            }
+        });
+
+
         return view;
     }
 

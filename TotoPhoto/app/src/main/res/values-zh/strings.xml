@@ -2,42 +2,42 @@
     <string name="app_name">Totophoto</string>
 
     <!--        Bottom NavBar       -->
-    <string name="title_home">Home</string>
-    <string name="title_my_account">Upload</string>
-    <string name="title_favorites">Favoris</string>
-    <string name="title_setting">Options</string>
+    <string name="title_home">家</string>
+    <string name="title_my_account">上传</string>
+    <string name="title_favorites">收藏 夹</string>
+    <string name="title_setting">选项</string>
 
     <!--        Settings        -->
-    <string name="select_country">Select your language: </string>
-    <string name="select_mode">Night mode: </string>
+    <string name="select_country">选择您的语言: </string>
+    <string name="select_mode">夜间模式: </string>
 
-    <string name="search">Recherche</string>
-    <string name="upload_a_picture">Upload une image</string>
-    <string name="image">Image</string>
-    <string name="added_fav">Image ajouté aux favoris</string>
-    <string name="delete_fav">Image retiré des favoris</string>
-    <string name="pic_uploaded">Image en cour de chargement</string>
-    <string name="uploading_pic">Image en cour d\'upload…</string>
-    <string name="pic_not_uploaded">Une erreur est survenu, l\image n\'a pas été upload</string>
-    <string name="copy_to_clipboard">Lien copié</string>
-    <string name="preview">Aperçu</string>
-    <string name="loading">Chargement…</string>
-    <string name="insert_a_tittle">Insérer un titre pour l\'image</string>
-    <string name="title">Titre</string>
-    <string name="ok">Ok</string>
-    <string name="cancel">Annuler</string>
-    <string name="no_title">Aucun titre</string>
-    <string name="no_internet">Aucune connexion internet</string>
-    <string name="internet_requiered">L\'app à besoin d\'une connexion internet valide pour fonctionner</string>
-    <string name="ok_too">Ok too but different button</string>
+    <string name="search">研究</string>
+    <string name="upload_a_picture">上传图片</string>
+    <string name="image">图像</string>
+    <string name="added_fav">添加到收藏夹的图像</string>
+    <string name="delete_fav">从收藏夹中删除的图像</string>
+    <string name="pic_uploaded">装载场中的图像</string>
+    <string name="uploading_pic">图片在庭院的上传。。。</string>
+    <string name="pic_not_uploaded">出现错误, 未上载文件</string>
+    <string name="copy_to_clipboard">复制的链接</string>
+    <string name="preview">概述</string>
+    <string name="loading">加载。。。</string>
+    <string name="insert_a_tittle">插入图像的标题</string>
+    <string name="title">标题</string>
+    <string name="ok">还行</string>
+    <string name="cancel">取消</string>
+    <string name="no_title">无标题</string>
+    <string name="no_internet">无互联网连接</string>
+    <string name="internet_requiered">应用程序需要有效的互联网连接才能正常工作</string>
+    <string name="ok_too">好的, 但不同的按钮</string>
     <string-array name="spinner_sort">
-        <item>temps</item>
-        <item>viral</item>
-        <item>top</item>
+        <item>时间</item>
+        <item>病毒</item>
+        <item>返回页首</item>
     </string-array>
     <string-array name="spinner_type">
-        <item>tous</item>
-        <item>album</item>
+        <item>所有</item>
+        <item>专辑</item>
         <item>jpg</item>
         <item>png</item>
         <item>gif</item>

@@ -12,12 +12,12 @@
         android:layout_height="46dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
-        app:layout_constraintStart_toEndOf="@+id/CNselect"
+        app:layout_constraintStart_toEndOf="@+id/ZHselect"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_fr_round_flag" />
 
     <ImageView
-        android:id="@+id/CNselect"
+        android:id="@+id/ZHselect"
         android:layout_width="46dp"
         android:layout_height="46dp"
         android:layout_marginStart="25dp"

@@ -4,13 +4,12 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
 import com.totophoto.Image.Favorite;
 import com.totophoto.Image.Image;
-import java.util.ArrayList;
+import com.totophoto.Models.Settings;
 
-/**
- * Created by Thomas on 05/02/2018.
- */
+import java.util.ArrayList;
 
 /**
  * This class is used for managed the Data-Base
@@ -84,5 +83,76 @@ public class ManageDB {
         c.close();
         db.close();
         return false;
+    }
+
+    // Gestion des settings
+
+    /**
+     *
+     * @return The current language
+     */
+    private String getLang() {
+        SQLiteDatabase db = mydb.getReadableDatabase();
+        Cursor cursor = db.query(myDB.DB_TABLE_LANG, new String[] {myDB.DB_LANG}, null, null, null, null, null);
+        String Lang = null;
+        while (cursor.moveToNext()) {
+            int indexLang = cursor.getColumnIndex(myDB.DB_LANG);
+            Lang = cursor.getString(indexLang);
+        }
+        cursor.close();
+        db.close();
+        return Lang;
+    }
+
+    /**
+     *
+     * @return The current mode
+     */
+    private String getMode() {
+        SQLiteDatabase db = mydb.getReadableDatabase();
+        Cursor cursor = db.query(myDB.DB_TABLE_MODE, new String[] {myDB.DB_MODE}, null, null, null, null, null);
+        String Mode = null;
+        while (cursor.moveToNext()) {
+            int indexMode = cursor.getColumnIndex(myDB.DB_MODE);
+            Mode = cursor.getString(indexMode);
+        }
+        cursor.close();
+        db.close();
+        return Mode;
+    }
+
+    /**
+     *
+     * @return The settings class
+     */
+    public Settings getSettings() {
+        String Lang = this.getLang();
+        String Mode = this.getMode();
+        Settings settings = new Settings(Lang, Mode);
+        return settings;
+    }
+
+    /**
+     *
+     * @param Lang The language selected
+     */
+    public void setLang(String Lang) {
+        SQLiteDatabase db = mydb.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(myDB.DB_LANG, Lang);
+        db.insertWithOnConflict(myDB.DB_TABLE_LANG, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+        db.close();
+    }
+
+    /**
+     *
+     * @param Mode The mode selected
+     */
+    public void setMode(String Mode) {
+        SQLiteDatabase db = mydb.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(myDB.DB_MODE, Mode);
+        db.insertWithOnConflict(myDB.DB_TABLE_MODE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+        db.close();
     }
 }

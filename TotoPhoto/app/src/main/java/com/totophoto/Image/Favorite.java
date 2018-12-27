@@ -1,9 +1,5 @@
 package com.totophoto.Image;
 
-/**
- * Created by Thomas on 05/02/2018.
- */
-
 public class Favorite extends Image{
     private int id;
 

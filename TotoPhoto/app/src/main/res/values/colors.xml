@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#2b2b2b</color>
-    <color name="colorPrimaryDark">#232323</color>
+    <color name="colorPrimaryDark">#242424</color>
     <color name="colorText">#000000</color>
+    <color name="colorTextNight">#ffffff</color>
+
     <color name="colorAccent">#ff8140</color>
     <color name="transparent">#00ffffff</color>
     <color name="transparentGrey">#7FF0F0F0</color>
     <color name="transparentBlack">#4f0f0f0f</color>
     <color name="transparentBlacker">#7F0f0f0f</color>
+
+
 </resources>
