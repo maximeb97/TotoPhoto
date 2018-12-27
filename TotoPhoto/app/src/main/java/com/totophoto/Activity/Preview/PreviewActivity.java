@@ -128,6 +128,7 @@ public class PreviewActivity extends AppCompatActivity implements SurfaceHolder.
             surfaceView.setVisibility(View.VISIBLE);
             loadVideo();
         } else {
+            findViewById(R.id.previewVideoLayout).setVisibility(View.INVISIBLE);
             Glide.with(getApplicationContext()).load(url).listener(new RequestListener<String, GlideDrawable>() {
                 @Override
                 public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {

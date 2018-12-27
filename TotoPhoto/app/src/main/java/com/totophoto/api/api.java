@@ -60,6 +60,7 @@ public class api {
 
         mResponse[0] = "";
         RequestFuture<String> future = RequestFuture.newFuture();
+
             StringRequest stringRequest = new StringRequest(method, url,
                 future, new Response.ErrorListener() {
             @Override
@@ -82,6 +83,8 @@ public class api {
                 return bBody;
             }
         };
+        stringRequest.setShouldCache(false);
+
         queue.add(stringRequest);
         try {
             mResponse[0] = future.get();

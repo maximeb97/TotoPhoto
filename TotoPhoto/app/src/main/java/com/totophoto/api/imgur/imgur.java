@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class imgur extends api {
 
-    private String clientID = "200bbef5eb30fff";
+    private String clientID = "953e87abfdac230";
     private String entryPoint = "https://api.imgur.com/3";
     private String sort = "time";
     private String type = "&q_type=";

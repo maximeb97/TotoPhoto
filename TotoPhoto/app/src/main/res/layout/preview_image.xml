@@ -17,15 +17,23 @@
                 android:layout_height="wrap_content">
 
                 <FrameLayout
-                    android:id="@+id/previewImageLayout"
+                    android:id="@+id/previewVideoLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="385dp">
 
                     <SurfaceView
                         android:id="@+id/previewVideo"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         app:srcCompat="@android:color/background_light" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/previewImageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
 
                     <ImageView
                         android:id="@+id/previewImage"
